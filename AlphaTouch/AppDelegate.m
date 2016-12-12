@@ -15,8 +15,24 @@
 @implementation AppDelegate
 
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+- (BOOL)application:(UIApplication *)application
+        didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  NSLog(@"Hello world");
+  UIScreen *screen = [UIScreen mainScreen];
+  CGRect viewRect = [screen bounds];
+  self.window = [[UIWindow alloc]initWithFrame:viewRect];
+  
+  UIViewController *colorTouchVC = [[UIViewController alloc]init];
+  UIView *colorView = [[UIView alloc]initWithFrame:viewRect];
+  colorView.backgroundColor = [UIColor brownColor];
+
+  colorTouchVC.view = colorView;  //set the colorTouchVC draw to our colorView
+  self.window.rootViewController = colorTouchVC;    //this tell the window to use colorTouchVC to draw the window
+  [self.window makeKeyAndVisible]; //means it should receive all keyboard and non-touch events
+  
+  
+  NSLog(@"screen is %f tall and %f wide",viewRect.size.height, viewRect.size.width);
   return YES;
 }
 
