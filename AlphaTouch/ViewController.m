@@ -29,7 +29,39 @@
   UIButton *firstButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];  //this is subviews
   firstButton.frame = CGRectMake(100, 100, 100, 44); // x = 100, y = 100, width : 100, 44 height (pts)
   [firstButton setTitle:@"Click me !" forState:UIControlStateNormal]; //state of the button
+  [firstButton
+   addTarget:self
+   action:@selector(buttonPressed:)   //send method name in parameter , we called @selector
+   forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:firstButton];
+  
+  UIButton *secondButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  secondButton.frame = CGRectMake(100, 150, 120, 44);
+  [secondButton setTitle:@"Disappear me !" forState:UIControlStateNormal];
+  [secondButton
+   addTarget:self
+   action:@selector(disappearButtonPressed:)
+   forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:secondButton];
+ 
+  UIButton *thirdButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  thirdButton.frame = CGRectMake(50, 200, 100, 44);
+  [thirdButton setTitle:@"make 50%" forState:UIControlStateNormal];
+  [thirdButton
+   addTarget:self
+   action:@selector(makeButtonTransparent:)
+   forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:thirdButton];
+  
+  UIButton *fourthButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  fourthButton.frame = CGRectMake(250, 200, 100, 44);
+  [fourthButton setTitle:@"make 100%" forState:UIControlStateNormal];
+  [fourthButton
+   addTarget:self
+   action:@selector(makeButtonTransparent:)
+   forControlEvents:UIControlEventTouchUpInside];
+  [self.view addSubview:fourthButton];
+  
   
   UILabel *firstLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 44)];
   firstLabel.backgroundColor = [UIColor clearColor];
@@ -37,19 +69,29 @@
   firstLabel.text = @"Hello , welcome to my app";
   [self.view addSubview:firstLabel];
   
-  [firstButton
-   addTarget:self
-   action:@selector(buttonPressed:)   //send method name in parameter , we called @selector
-   forControlEvents:UIControlEventTouchUpInside];
+  
   
 }
--(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
   NSLog(@"Touch Begin");
 }
 
 - (void)buttonPressed:(UIButton *)sender{
   NSLog(@"button pressed, sender : %@",sender);
   self.view.alpha = ((double)arc4random() / 0x100000000);
+}
+-(void)disappearButtonPressed:(UIButton *)sender{
+  NSLog(@"button disappear, sender : %@",sender);
+  [sender removeFromSuperview];
+}
+
+-(void)makeButtonTransparent:(UIButton *)sender{
+  NSLog(@"make button transparent : %@",sender);
+  if([sender.titleLabel.text isEqualToString:@"make 50%"]){
+    self.view.alpha = 0.5;
+  }else{
+    self.view.alpha = 1;
+  }
 }
 
 - (void)didReceiveMemoryWarning {
