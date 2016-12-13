@@ -44,23 +44,23 @@
    forControlEvents:UIControlEventTouchUpInside];
   [self.view addSubview:secondButton];
  
-  UIButton *thirdButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  thirdButton.frame = CGRectMake(50, 200, 100, 44);
-  [thirdButton setTitle:@"make 50%" forState:UIControlStateNormal];
-  [thirdButton
+  self.fiftyPercentButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  self.fiftyPercentButton.frame = CGRectMake(50, 200, 100, 44);
+  [self.fiftyPercentButton setTitle:@"make 50%" forState:UIControlStateNormal];
+  [self.fiftyPercentButton
    addTarget:self
    action:@selector(makeButtonTransparent:)
    forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:thirdButton];
+  [self.view addSubview:self.fiftyPercentButton];
   
-  UIButton *fourthButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-  fourthButton.frame = CGRectMake(250, 200, 100, 44);
-  [fourthButton setTitle:@"make 100%" forState:UIControlStateNormal];
-  [fourthButton
+  self.oneHundredPercentButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+  self.oneHundredPercentButton.frame = CGRectMake(250, 200, 100, 44);
+  [self.oneHundredPercentButton setTitle:@"make 100%" forState:UIControlStateNormal];
+  [self.oneHundredPercentButton
    addTarget:self
    action:@selector(makeButtonTransparent:)
    forControlEvents:UIControlEventTouchUpInside];
-  [self.view addSubview:fourthButton];
+  [self.view addSubview:self.oneHundredPercentButton];
   
   
   UILabel *firstLabel = [[UILabel alloc]initWithFrame:CGRectMake(50, 30, 200, 44)];
@@ -87,7 +87,7 @@
 
 -(void)makeButtonTransparent:(UIButton *)sender{
   NSLog(@"make button transparent : %@",sender);
-  if([sender.titleLabel.text isEqualToString:@"make 50%"]){
+  if([sender isEqual:self.fiftyPercentButton]){
     self.view.alpha = 0.5;
   }else{
     self.view.alpha = 1;
