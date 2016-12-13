@@ -11,6 +11,7 @@
 		499C9C561DFFC9DB000BEBD0 /* FeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499C9C541DFFC9DB000BEBD0 /* FeedViewController.xib */; };
 		499C9C591DFFCA1D000BEBD0 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C9C581DFFCA1D000BEBD0 /* FavouritesViewController.m */; };
 		499C9C5C1DFFCE66000BEBD0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C9C5B1DFFCE66000BEBD0 /* ProfileViewController.m */; };
+		499C9C601DFFE8FE000BEBD0 /* cuteCatAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */; };
 		49F422101DFF35F400932D7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F4220F1DFF35F400932D7D /* main.m */; };
 		49F422131DFF35F400932D7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F422121DFF35F400932D7D /* AppDelegate.m */; };
 		49F422161DFF35F400932D7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F422151DFF35F400932D7D /* ViewController.m */; };
@@ -47,6 +48,7 @@
 		499C9C581DFFCA1D000BEBD0 /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
 		499C9C5A1DFFCE66000BEBD0 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
 		499C9C5B1DFFCE66000BEBD0 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cuteCatAnimated.gif; path = ../../../Downloads/cuteCatAnimated.gif; sourceTree = "<group>"; };
 		49F4220B1DFF35F400932D7D /* AlphaTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F4220F1DFF35F400932D7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49F422111DFF35F400932D7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 		49F4220D1DFF35F400932D7D /* AlphaTouch */ = {
 			isa = PBXGroup;
 			children = (
+				499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */,
 				499C9C571DFFCA1D000BEBD0 /* FavouritesViewController.h */,
 				499C9C581DFFCA1D000BEBD0 /* FavouritesViewController.m */,
 				499C9C521DFFC9DB000BEBD0 /* FeedViewController.h */,
@@ -270,6 +273,7 @@
 				49F422211DFF35F400932D7D /* LaunchScreen.storyboard in Resources */,
 				49F4221E1DFF35F400932D7D /* Assets.xcassets in Resources */,
 				499C9C561DFFC9DB000BEBD0 /* FeedViewController.xib in Resources */,
+				499C9C601DFFE8FE000BEBD0 /* cuteCatAnimated.gif in Resources */,
 				49F422191DFF35F400932D7D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

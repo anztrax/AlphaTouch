@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface FavouritesViewController : UIViewController
-
+-(void)showProfile:(UIButton *)sender;
+-(void)showZoomedPicture:(UIButton *)sender;
 @end

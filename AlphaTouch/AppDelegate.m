@@ -25,14 +25,10 @@
   NSLog(@"Hello world");
   
   FeedViewController *feedViewController = [[FeedViewController alloc]init];
-  FavouritesViewController *favouritesViewController = [[FavouritesViewController alloc]init];
-  ProfileViewController *profileViewController = [[ProfileViewController alloc]init];
-
-  UITabBarController *tabBarController = [[UITabBarController alloc]init];
-  [tabBarController setViewControllers:@[feedViewController, favouritesViewController, profileViewController]];
+  UINavigationController *navController = [[UINavigationController alloc]initWithRootViewController:feedViewController];
   
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-  self.window.rootViewController = tabBarController;
+  self.window.rootViewController = navController;
   [self.window makeKeyAndVisible];
   
   return YES;
