@@ -23,6 +23,7 @@
 		49F422211DFF35F400932D7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F4221F1DFF35F400932D7D /* LaunchScreen.storyboard */; };
 		49F4222C1DFF35F400932D7D /* AlphaTouchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F4222B1DFF35F400932D7D /* AlphaTouchTests.m */; };
 		49F422371DFF35F400932D7D /* AlphaTouchUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F422361DFF35F400932D7D /* AlphaTouchUITests.m */; };
+		99C80663B423814CAE380C09 /* libPods-AlphaTouch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F5567C467B89F99FBCFB565D /* libPods-AlphaTouch.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,9 @@
 		49F422321DFF35F400932D7D /* AlphaTouchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlphaTouchUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F422361DFF35F400932D7D /* AlphaTouchUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AlphaTouchUITests.m; sourceTree = "<group>"; };
 		49F422381DFF35F400932D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DD70DBB334D803F0157782B /* Pods-AlphaTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaTouch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaTouch/Pods-AlphaTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		D1DACB8065AAB8B0284F38BE /* Pods-AlphaTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AlphaTouch.release.xcconfig"; path = "Pods/Target Support Files/Pods-AlphaTouch/Pods-AlphaTouch.release.xcconfig"; sourceTree = "<group>"; };
+		F5567C467B89F99FBCFB565D /* libPods-AlphaTouch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AlphaTouch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99C80663B423814CAE380C09 /* libPods-AlphaTouch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +111,8 @@
 				49F4222A1DFF35F400932D7D /* AlphaTouchTests */,
 				49F422351DFF35F400932D7D /* AlphaTouchUITests */,
 				49F4220C1DFF35F400932D7D /* Products */,
+				9A91CFCB22C0CAFB47EDEDFD /* Pods */,
+				CD7D91B08A0CA091ED3A9F66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +181,23 @@
 			path = AlphaTouchUITests;
 			sourceTree = "<group>";
 		};
+		9A91CFCB22C0CAFB47EDEDFD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7DD70DBB334D803F0157782B /* Pods-AlphaTouch.debug.xcconfig */,
+				D1DACB8065AAB8B0284F38BE /* Pods-AlphaTouch.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD7D91B08A0CA091ED3A9F66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5567C467B89F99FBCFB565D /* libPods-AlphaTouch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,9 +205,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49F4223B1DFF35F400932D7D /* Build configuration list for PBXNativeTarget "AlphaTouch" */;
 			buildPhases = (
+				7029DAFD5649F4A13DF038BA /* [CP] Check Pods Manifest.lock */,
 				49F422071DFF35F400932D7D /* Sources */,
 				49F422081DFF35F400932D7D /* Frameworks */,
 				49F422091DFF35F400932D7D /* Resources */,
+				77581FA4F45EBBB570952AF0 /* [CP] Embed Pods Frameworks */,
+				7EE322F141B03DFA4E04B164 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -303,6 +330,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7029DAFD5649F4A13DF038BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		77581FA4F45EBBB570952AF0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlphaTouch/Pods-AlphaTouch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7EE322F141B03DFA4E04B164 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AlphaTouch/Pods-AlphaTouch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		49F422071DFF35F400932D7D /* Sources */ = {
@@ -464,6 +539,7 @@
 		};
 		49F4223C1DFF35F400932D7D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DD70DBB334D803F0157782B /* Pods-AlphaTouch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AlphaTouch/Info.plist;
@@ -475,6 +551,7 @@
 		};
 		49F4223D1DFF35F400932D7D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1DACB8065AAB8B0284F38BE /* Pods-AlphaTouch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = AlphaTouch/Info.plist;
