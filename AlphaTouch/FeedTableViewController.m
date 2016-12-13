@@ -8,6 +8,7 @@
 
 #import "FeedTableViewController.h"
 #import "PhotoViewController.h"
+#import <AFNetworking.h>
 
 @interface FeedTableViewController ()
 
@@ -22,6 +23,26 @@
   self.title = @"Feed";
   self.tabBarItem.image = [UIImage imageNamed:@"feedIcon"];
   self.imageFileNames = @[@"cuteCatAnimated.gif",@"giantCat",@"FancyCat"];
+  
+  NSURL *JSONData = [NSURL URLWithString:@"https://rawgit.com/anztrax/learn-objectiveC/master/images.json"];
+  NSURLRequest *requestedData = [NSURLRequest requestWithURL:JSONData];
+  AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc]initWithRequest:requestedData];
+  operation.responseSerializer = [AFJSONResponseSerializer serializer];
+  [operation
+   setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject){
+     self.photos = responseObject;
+     [self reloadData];
+   }
+   failure:^(AFHTTPRequestOperation *operation, NSError *error){
+     NSLog(@"NSError %@", error.localizedDescription);
+   }
+   ];
+  [operation start];
+
+}
+
+-(void)reloadData{
+  
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

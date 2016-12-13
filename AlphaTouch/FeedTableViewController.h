@@ -10,4 +10,7 @@
 
 @interface FeedTableViewController : UITableViewController
 @property(nonatomic)NSArray *imageFileNames;
+@property(strong, nonatomic) NSArray *photos;
+
+-(void)reloadData;
 @end
