@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface ProfileViewController : UIViewController
-
+@property(nonatomic) UIScrollView *scrollView;
 @end
