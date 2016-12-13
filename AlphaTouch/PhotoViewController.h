@@ -1,5 +1,5 @@
 //
-//  FeedTableViewController.h
+//  PhotoViewController.h
 //  AlphaTouch
 //
 //  Created by andrew ananta on 12/13/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FeedTableViewController : UITableViewController
-@property(nonatomic)NSArray *imageFileNames;
+@interface PhotoViewController : UIViewController
+@property(strong, nonatomic) NSString *imageFileName;
 @end

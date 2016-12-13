@@ -11,6 +11,7 @@
 #import "FeedViewController.h"
 #import "FavouritesViewController.h"
 #import "ProfileViewController.h"
+#import "FeedTableViewController.h"
 
 @interface AppDelegate ()
 
@@ -24,8 +25,8 @@
   // Override point for customization after application launch.
   NSLog(@"Hello world");
   
-  FeedViewController *feedViewController = [[FeedViewController alloc]init];
-  UINavigationController *feedNavController = [[UINavigationController alloc]initWithRootViewController:feedViewController];
+  FeedTableViewController *feedTableViewController = [[FeedTableViewController alloc]initWithStyle:UITableViewStylePlain];
+  UINavigationController *feedTableNavController = [[UINavigationController alloc]initWithRootViewController:feedTableViewController];
   
   FavouritesViewController *favouritesViewController = [[FavouritesViewController alloc]init];
   UINavigationController *favouriteNavController = [[UINavigationController alloc]initWithRootViewController:favouritesViewController];
@@ -36,7 +37,7 @@
 
   self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
   UITabBarController *tabBarController = [[UITabBarController alloc]init];
-  [tabBarController setViewControllers:@[feedNavController,favouriteNavController,profileNavController]];
+  [tabBarController setViewControllers:@[feedTableNavController,favouriteNavController,profileNavController]];
   
   self.window.rootViewController = tabBarController;
   [self.window makeKeyAndVisible];

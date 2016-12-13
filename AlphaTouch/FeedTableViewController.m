@@ -7,6 +7,7 @@
 //
 
 #import "FeedTableViewController.h"
+#import "PhotoViewController.h"
 
 @interface FeedTableViewController ()
 
@@ -17,6 +18,46 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  self.view.backgroundColor = [UIColor whiteColor];
+  self.title = @"Feed";
+  self.tabBarItem.image = [UIImage imageNamed:@"feedIcon"];
+  self.imageFileNames = @[@"cuteCatAnimated.gif",@"giantCat",@"FancyCat"];
+}
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+  return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  return self.imageFileNames.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  //initialize and setup each cell in your tableView
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Title"]; //check to see if there are any cells of style "Title" we can reuse
+  if(cell == nil){
+    cell = [[UITableViewCell alloc]
+            initWithStyle:UITableViewCellStyleDefault
+            reuseIdentifier:@"Title"
+            ];
+    NSInteger currentRow = indexPath.row;
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ - %i",self.imageFileNames[currentRow],(round(currentRow) + 1)];
+  }
+  return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+  //this method runs each time a cell is tapped
+  NSInteger currentRow = indexPath.row;
+  NSInteger currentSection = indexPath.section;
+  
+  PhotoViewController *photoViewController = [[PhotoViewController alloc]init];
+  photoViewController.imageFileName = self.imageFileNames[currentRow];
+
+  [self.navigationController
+   pushViewController:photoViewController
+   animated:YES
+   ];
 }
 
 - (void)didReceiveMemoryWarning {

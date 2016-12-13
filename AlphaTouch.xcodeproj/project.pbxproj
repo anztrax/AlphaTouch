@@ -13,6 +13,7 @@
 		499C9C5C1DFFCE66000BEBD0 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C9C5B1DFFCE66000BEBD0 /* ProfileViewController.m */; };
 		499C9C601DFFE8FE000BEBD0 /* cuteCatAnimated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */; };
 		499C9C631DFFF2C8000BEBD0 /* FeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C9C621DFFF2C8000BEBD0 /* FeedTableViewController.m */; };
+		499C9C661DFFFCFA000BEBD0 /* PhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 499C9C651DFFFCFA000BEBD0 /* PhotoViewController.m */; };
 		49F422101DFF35F400932D7D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F4220F1DFF35F400932D7D /* main.m */; };
 		49F422131DFF35F400932D7D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F422121DFF35F400932D7D /* AppDelegate.m */; };
 		49F422161DFF35F400932D7D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F422151DFF35F400932D7D /* ViewController.m */; };
@@ -52,6 +53,8 @@
 		499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = cuteCatAnimated.gif; path = ../../../Downloads/cuteCatAnimated.gif; sourceTree = "<group>"; };
 		499C9C611DFFF2C8000BEBD0 /* FeedTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedTableViewController.h; sourceTree = "<group>"; };
 		499C9C621DFFF2C8000BEBD0 /* FeedTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedTableViewController.m; sourceTree = "<group>"; };
+		499C9C641DFFFCFA000BEBD0 /* PhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoViewController.h; sourceTree = "<group>"; };
+		499C9C651DFFFCFA000BEBD0 /* PhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoViewController.m; sourceTree = "<group>"; };
 		49F4220B1DFF35F400932D7D /* AlphaTouch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlphaTouch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F4220F1DFF35F400932D7D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		49F422111DFF35F400932D7D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -122,8 +125,12 @@
 				499C9C5F1DFFE8FE000BEBD0 /* cuteCatAnimated.gif */,
 				499C9C571DFFCA1D000BEBD0 /* FavouritesViewController.h */,
 				499C9C581DFFCA1D000BEBD0 /* FavouritesViewController.m */,
+				499C9C641DFFFCFA000BEBD0 /* PhotoViewController.h */,
+				499C9C651DFFFCFA000BEBD0 /* PhotoViewController.m */,
 				499C9C521DFFC9DB000BEBD0 /* FeedViewController.h */,
 				499C9C531DFFC9DB000BEBD0 /* FeedViewController.m */,
+				499C9C611DFFF2C8000BEBD0 /* FeedTableViewController.h */,
+				499C9C621DFFF2C8000BEBD0 /* FeedTableViewController.m */,
 				499C9C5A1DFFCE66000BEBD0 /* ProfileViewController.h */,
 				499C9C5B1DFFCE66000BEBD0 /* ProfileViewController.m */,
 				499C9C541DFFC9DB000BEBD0 /* FeedViewController.xib */,
@@ -137,8 +144,6 @@
 				49F422221DFF35F400932D7D /* Info.plist */,
 				49F4221A1DFF35F400932D7D /* AlphaTouch.xcdatamodeld */,
 				49F4220E1DFF35F400932D7D /* Supporting Files */,
-				499C9C611DFFF2C8000BEBD0 /* FeedTableViewController.h */,
-				499C9C621DFFF2C8000BEBD0 /* FeedTableViewController.m */,
 			);
 			path = AlphaTouch;
 			sourceTree = "<group>";
@@ -310,6 +315,7 @@
 				49F422131DFF35F400932D7D /* AppDelegate.m in Sources */,
 				499C9C5C1DFFCE66000BEBD0 /* ProfileViewController.m in Sources */,
 				499C9C591DFFCA1D000BEBD0 /* FavouritesViewController.m in Sources */,
+				499C9C661DFFFCFA000BEBD0 /* PhotoViewController.m in Sources */,
 				49F422101DFF35F400932D7D /* main.m in Sources */,
 				499C9C631DFFF2C8000BEBD0 /* FeedTableViewController.m in Sources */,
 			);
