@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,15 +22,11 @@
   NSLog(@"Hello world");
   UIScreen *screen = [UIScreen mainScreen];
   CGRect viewRect = [screen bounds];
-  self.window = [[UIWindow alloc]initWithFrame:viewRect];
+  self.window = [[UIWindow alloc] initWithFrame:viewRect];
   
-  UIViewController *colorTouchVC = [[UIViewController alloc]init];
-  UIView *colorView = [[UIView alloc]initWithFrame:viewRect];
-  colorView.backgroundColor = [UIColor brownColor];
-
-  colorTouchVC.view = colorView;  //set the colorTouchVC draw to our colorView
-  self.window.rootViewController = colorTouchVC;    //this tell the window to use colorTouchVC to draw the window
-  [self.window makeKeyAndVisible]; //means it should receive all keyboard and non-touch events
+  self.viewController = [[ViewController alloc] init];
+  self.window.rootViewController = self.viewController;
+  [self.window makeKeyAndVisible];
   
   
   NSLog(@"screen is %f tall and %f wide",viewRect.size.height, viewRect.size.width);
