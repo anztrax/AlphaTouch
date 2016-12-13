@@ -8,6 +8,9 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "FeedViewController.h"
+#import "FavouritesViewController.h"
+#import "ProfileViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,16 +23,18 @@
         didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   NSLog(@"Hello world");
-  UIScreen *screen = [UIScreen mainScreen];
-  CGRect viewRect = [screen bounds];
-  self.window = [[UIWindow alloc] initWithFrame:viewRect];
   
-  self.viewController = [[ViewController alloc] init];
-  self.window.rootViewController = self.viewController;
+  FeedViewController *feedViewController = [[FeedViewController alloc]init];
+  FavouritesViewController *favouritesViewController = [[FavouritesViewController alloc]init];
+  ProfileViewController *profileViewController = [[ProfileViewController alloc]init];
+
+  UITabBarController *tabBarController = [[UITabBarController alloc]init];
+  [tabBarController setViewControllers:@[feedViewController, favouritesViewController, profileViewController]];
+  
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  self.window.rootViewController = tabBarController;
   [self.window makeKeyAndVisible];
   
-  
-  NSLog(@"screen is %f tall and %f wide",viewRect.size.height, viewRect.size.width);
   return YES;
 }
 
